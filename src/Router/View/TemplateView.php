@@ -3,18 +3,18 @@
 namespace Framework312\Router\View;
 
 use Framework312\Router\Request;
-use Framework312\Router\View\BaseView;
 use Symfony\Component\HttpFoundation\Response;
+use Framework312\Template\Renderer; // Import correct de l'interface Renderer
 
 class TemplateView extends BaseView
 {
-    private $renderer;
+    protected Renderer $renderer; // Utilisation de protected pour permettre l'accès dans les classes dérivées
 
     /**
      * Constructeur
-     * @param $renderer
+     * @param Renderer $renderer
      */
-    public function __construct($renderer) {
+    public function __construct(Renderer $renderer) {
         $this->renderer = $renderer;
         // Enregistre la route avec la vue et son chemin
         $this->renderer->register(static::class);
@@ -22,14 +22,14 @@ class TemplateView extends BaseView
 
     static public function use_template(): bool
     {
-        return true; # utilise un template
+        return true; // utilise un template
     }
 
     public function render(Request $request): Response
     {
-        //Obtient la méthode voulu de la requête.
+        // Obtient la méthode voulu de la requête.
         $request = $request->getMethod();
-        //Retourne le nom du fichier de template associé à la classe
+        // Retourne le nom du fichier de template associé à la classe
         $templateName = $this->getTemplateName();
         // Rendu du contenu du template avec les données de la requête
         $content = $this->renderer->render($templateName, $request);
@@ -51,5 +51,4 @@ class TemplateView extends BaseView
     private function getTemplateName(): string {
         return strtolower(static::class) . '_template.html.twig';
     }
-
 }

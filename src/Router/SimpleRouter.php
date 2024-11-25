@@ -2,6 +2,7 @@
 
 namespace Framework312\Router;
 
+use Error;
 use Framework312\Router\Exception as RouterException;
 use Framework312\Template\Renderer;
 use Symfony\Component\HttpFoundation\Response;
@@ -61,7 +62,7 @@ class SimpleRouter implements Router {
             $response->send(); 
         } else {
             // Si la route n'est pas trouvée, alors une exception est lancée
-            throw new RouterException\RouteNotFound("Route pour le chemin '{$path}' non trouvée.");
+            throw new Error("Route pour le chemin '{$path}' non trouvée.");
         }
     }
 }
