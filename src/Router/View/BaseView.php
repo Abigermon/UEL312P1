@@ -7,6 +7,7 @@ use Framework312\Router\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 abstract class BaseView {
+
     protected function get(Request $request): mixed {
         throw new RouterException\HttpMethodNotImplemented(static::class, 'GET');
     }
