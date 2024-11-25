@@ -63,6 +63,7 @@ class SimpleRouter implements Router {
             throw new RouterException\RouteNotFound("Route pour le chemin '{$path}' non trouvée.");
     }
 }
+
 }
 
 ?>
