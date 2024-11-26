@@ -1,31 +1,21 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            {% block stylesheets %}
-                {{ encore_entry_link_tags('app') }}
-            {% endblock %}    
-            <meta charset="UTF-8">
-            <title>{% block title %}Titre!{% endblock %}</title>
-            <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-
-        </head>
-        <body>
-            
-            
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/main.css">
+    <title>{% block title %}My App{% endblock %}</title>
+</head>
+<body>
+    <header>
+    </header>
     <nav>
-        <ul>
-            <li><a href="{{ path('app_home') }}">Accueil</a></li>
-            <li><a href="{{ path('app_about') }}">A propos</a></li>
-            <li><a href="{{ path('app_contact') }}">Contact</a></li>
-        </ul>
+        <!-- Navigation menu -->
     </nav>
-
-{% block body %}
-
-{% endblock %}
-
-
-
-
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+    </footer>
 </body>
 </html>

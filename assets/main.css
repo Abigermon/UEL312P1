@@ -1,3 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 body{
     overflow-x: hidden;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.php{
+    color: red;
+}
+
+h1{
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 1rem;
+}
+
+.ButtonRed{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 3rem;
+    width: fit-content;
+    background-color: red;
+    border-radius: 0.5rem;
+    border: none;
+    color: white;
+    padding: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition-duration: 200ms;
+    border: 1px solid red;
+
+}
+
+.buttonBlack{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 3rem;
+    width: fit-content;
+    background-color: transparent;
+    border-radius: 0.5rem;
+    border: black;
+    border: 1px solid black;
+    color: black;
+    padding: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition-duration: 200ms;
+
+}
+
+.buttonBlack:hover{
+    background-color: black;
+    color: white;
+}
+
+.ButtonRed:hover{
+    background-color: white;
+    color: red;
+}
+
+.form{
+    display: flex;
+    gap: 10px;
 }
