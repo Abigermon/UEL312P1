@@ -6,6 +6,8 @@ body{
     font-family: "Montserrat", serif;
     font-optical-sizing: auto;
     font-style: normal;
+    margin: 0;
+    padding: 0;
 }
 
 .main{
@@ -82,4 +84,17 @@ h1{
 .form{
     display: flex;
     gap: 10px;
+}
+
+.alert{
+    background-color: red;
+    height: 1rem;
+    width: 100%;
+    display: fixed;
+    top: 0;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
